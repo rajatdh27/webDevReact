@@ -1,0 +1,13 @@
+.main {
+  margin-left: 5rem;
+  padding: 1rem;
+  background-color: rgba(242, 222, 222, 0.688);
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    margin-left: 0rem;
+    margin-bottom: 5rem;
+    padding: 1rem;
+  }
+}

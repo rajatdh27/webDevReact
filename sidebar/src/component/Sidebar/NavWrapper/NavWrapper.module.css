@@ -1,0 +1,42 @@
+.navigation {
+  position: fixed;
+  width: 5rem;
+  height: 100vh;
+  background-color: bisque;
+  transition: all 0.3s ease;
+}
+.navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.navigation:hover {
+  width: 12rem;
+}
+
+.navigation:hover .navigation-link {
+  color: brown;
+}
+
+.navigation:hover .navigation-items .navigation-item:hover {
+  background-color: rgb(192, 172, 147);
+}
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+  .navigation-items {
+    flex-direction: row;
+  }
+  .navigation:hover {
+    width: 100%;
+  }
+}

@@ -1,0 +1,48 @@
+.navigation-item {
+  width: 100%;
+}
+
+.navigation-item:last-child {
+  margin-top: auto;
+}
+
+.navigation-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  text-decoration: none;
+  color: rgb(212, 55, 55);
+  transition: all 0.3s ease;
+}
+
+.navigation-link:hover {
+  transform: scale(1.2);
+  color: rgb(90, 23, 23);
+}
+
+.link-text {
+  display: none;
+}
+
+.navigation-link:hover .link-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .navigation-items {
+    flex-direction: row;
+  }
+  .navigation-link:hover .link-text {
+    display: none;
+  }
+  .navigation-link:hover {
+    transform: scale(1.2);
+  }
+  .navigation-link {
+    justify-content: center;
+  }
+}
