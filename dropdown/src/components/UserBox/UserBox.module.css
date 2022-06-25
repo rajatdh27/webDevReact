@@ -1,0 +1,37 @@
+.userBox {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.userBox .imgBox {
+  min-width: 3.5rem;
+  position: relative;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0.5rem solid transparent;
+  overflow: hidden;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+.userBox .userName {
+  white-space: nowrap;
+  color: #555;
+  font-size: 1.3rem;
+}
+.userBox .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.active .userBox {
+  width: calc(100%);
+}

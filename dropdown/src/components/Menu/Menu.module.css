@@ -1,0 +1,8 @@
+.menu {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 3.5rem);
+  margin-top: 3.5rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,23 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  height: 3.5rem;
+  width: 7rem;
+  background-color: transparent;
+  box-shadow: 0 1rem 2rem rgb(0, 0, 0, 0.1);
+  transition: height 0.5s, width 0.5s;
+  transition-delay: 0s, 0.75s;
+  overflow: hidden;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.active {
+  width: 20rem;
+  height: 24rem;
+  transition: width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.75s;
+}

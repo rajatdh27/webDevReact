@@ -1,0 +1,42 @@
+.menuToggle {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuToggle::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.17rem;
+  cursor: pointer;
+  background-color: rgb(53, 53, 53);
+  transform: translateY(-10px);
+  box-shadow: 0 10px rgb(53, 53, 53);
+  transition: 0.5s;
+}
+
+.menuToggle::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.17rem;
+  cursor: pointer;
+  background-color: rgb(53, 53, 53);
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+.active .menuToggle::before {
+  transform: translateY(0) rotate(45deg);
+  box-shadow: 0 0 rgb(53, 53, 53);
+}
+
+.active .menuToggle::after {
+  transform: translateY(0) rotate(-45deg);
+}
