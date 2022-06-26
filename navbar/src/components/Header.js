@@ -1,9 +1,12 @@
 import React from "react";
 import classes from "./Header.module.scss";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [dark, setDark] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
+  const navigate = useNavigate();
   const [size, setSize] = useState({
     width: undefined,
     height: undefined,
@@ -29,31 +32,44 @@ const Header = () => {
   const toggleHandler = () => {
     setToggleMenu(!toggleMenu);
   };
+  const clickMeHandler = () => {
+    setDark(!dark);
+    navigate("/logout");
+    toggleHandler();
+  };
   return (
-    <header className={classes.header}>
+    <header className={` ${dark ? classes.light : ""} ${classes.header}`}>
       <div className={classes.header__content}>
         <h2 className={classes.header__content__logo}>Navbar</h2>
 
         <nav
           className={`${classes.header__content__nav} ${
-            toggleMenu ? classes.isMenu : ""
+            toggleMenu && size.width < 768 ? classes.isMenu : ""
           }`}
         >
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/" onClick={toggleHandler}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about" onClick={toggleHandler}>
+                About
+              </Link>
             </li>
             <li>
-              <a href="/content">Content</a>
+              <Link to="/content" onClick={toggleHandler}>
+                Content
+              </Link>
             </li>
             <li>
-              <a href="/logout">Logout</a>
+              <Link to="/logout" onClick={toggleHandler}>
+                Logout
+              </Link>
             </li>
           </ul>
-          <button>Click Me</button>
+          <button onClick={clickMeHandler}>Click Me</button>
         </nav>
 
         <div
